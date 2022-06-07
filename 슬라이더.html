@@ -1,0 +1,44 @@
+<html>
+    <head>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+        <style>
+
+            .slider{position: relative; width: 500px; height: 100px; ;}
+            
+        </style>
+
+        <script>
+
+            $(document).ready(function(){
+            $('.slider').bxSlider({
+            auto: true,
+            autoControls: true,
+            stopAutoOnClick: true,
+            pager: true,
+            speed: 500,
+            slideWidth: 500
+            });
+            });
+            $('.bxslider').bxSlider();
+        </script>
+    </head>
+
+    <body>
+
+        <div class="slider">
+
+            <div><img src="https://i.pinimg.com/236x/a7/12/2b/a7122b4bac69df5e9eb2905c884c934d.jpg"></div>
+            <div><img src="https://i.pinimg.com/236x/7b/5e/78/7b5e78f10825bb02645fa73dfc2ede6e.jpg"></div>
+            <div><img src="https://i.pinimg.com/236x/19/7f/62/197f62fe735a5144fbf2d2beb791a24c.jpg"></div>
+           
+        </div>
+
+        <div class="bxslider">
+           
+          </div>
+    </body>
+</html>

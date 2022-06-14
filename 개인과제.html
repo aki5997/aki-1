@@ -1,0 +1,360 @@
+<html>
+
+    <title>Dionea</title>
+
+    <head>
+        <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+        />
+       <!-- Link Swiper's CSS -->
+       <link
+         rel="stylesheet"
+         href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+       
+
+        <style>
+
+         @font-face {
+           font-family: 'KCC-eunyoung';
+           src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff') format('woff');
+           font-weight: normal;
+           font-style: normal;}
+
+          @font-face {
+           font-family: 'DungGeunMo';
+           src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+           font-weight: normal;
+           font-style: normal;}
+
+          @font-face {
+           font-family: 'KCC-Kimhoon';
+           src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-Kimhoon-Regular.woff') format('woff');
+           font-weight: normal;
+           font-style: normal;}
+
+           
+
+            /*기본*/
+            .pull-left { float: left; }
+            .pull-right { float: right; }
+
+            span{font-size: 12pt; color: rgb(164, 0, 0);}
+            h1{text-align: center;}
+
+
+            html{scroll-behavior: smooth;}
+
+
+            body{ background-color: black; color: white; float: left; position: relative;
+                  line-height: 50px;} 
+
+
+            #L{position: sticky; float: left; top: 10px;
+                width: 20%; height: 300px; background-color: rgb(0, 0, 0);}
+
+            ul{}
+
+            li{ list-style: none; text-decoration: none; color: rgb(255, 255, 255);}
+
+            .black{position: fixed; background-color: black; width: 100%; height: 100%; display: none;}
+
+
+            /*왼쪽 버튼들*/
+            .btn {
+              border: none;
+              font-family: 'DungGeunMo';
+              font-size: 20px;
+              color: inherit;
+              background: none;
+              cursor: pointer;
+              width: 150px;
+              padding: 25px 30px;
+              display: inline-block;
+              margin: 20px 30px;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              font-weight: 700;
+              outline: none;
+              position: relative;
+              -webkit-transition: all 0.3s;
+              -moz-transition: all 0.3s;
+              transition: all 0.3s;}
+
+            .btn-2 {
+             background: #505050;
+             color: rgb(255, 255, 255);
+             box-shadow: 0 6px #3b3b3b;
+             -webkit-transition: none;
+             -moz-transition: none;
+             transition: none;}
+
+            .btn-2c { border-radius: 5px;}
+
+            .btn-2c:hover { box-shadow: 0 4px #3b3b3b; top: 2px; }
+            .btn-2c:hover .black{display: block;}
+
+            .btn-2c:active {
+             box-shadow: 0 0 #ab3c3c;
+             top: 6px;}
+
+            .btn:after {content: '';
+                   position: absolute;
+                   z-index: -1;
+                   -webkit-transition: all 0.3s;
+                   -moz-transition: all 0.3s;
+                   transition: all 0.3s;}
+
+            *, *:after, *:before {
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;}
+
+
+
+            .본문{ float: left; position: relative; width: 60%; height: auto; margin: 10 10 10 150; font-family: 'DungGeunMo'}
+
+            header{ position: relative; top: 0; width: 100%; height: 100px; margin: 40 100 100 100;
+                    font-size: 60pt; text-align: center; letter-spacing: 20px; font-family: 'Rubik Glitch', cursive; color: rgb(225, 0, 0);}
+
+            /*div{; margin: 10 10  10  10;}*/
+
+            .in{ position: absolute;}
+
+            #d{ font-family: 'KCC-eunyoung'; font-size: 15pt;}/*이거 슬라이더 쓰고 싶음*/
+
+            footer{clear: both; bottom: 0; margin: 10 10 10 10;
+                   text-align: right; font-family: 'DungGeunMo'; font-size: 10pt; color: rgb(174, 174, 174);}
+
+
+            /*슬라이더*/
+            .swiper {
+                margin: 100px auto;
+                width: 450px;
+                height: 550px;}
+
+            .swiper-slide {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               font-weight: ;
+               font-family: 'KCC-eunyoung';
+               font-size: 25px;
+        
+               color: rgb(0, 0, 0);}
+
+            .andlog{ position: absolute; top: 50px; margin: 10  50  50  50; 
+               line-height: 1.5;}
+
+
+
+            .swiper-slide:nth-child(1n) {
+             background-image: url('https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131__340.jpg') ; background-color: rgb(94, 74, 0);}
+
+            .swiper-slide:nth-child(2n) {
+             background-color: rgb(0, 140, 255); background-image: url('https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131__340.jpg');}
+
+            .swiper-slide:nth-child(3n) {
+              background-color: rgb(10, 184, 111); background-image: url('https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131__340.jpg');}
+
+            .swiper-slide:nth-child(4n) {
+              background-color: rgb(211, 122, 7); background-image: url('https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131__340.jpg');}
+
+            .swiper-slide:nth-child(5n) {
+              background-color: rgb(118, 163, 12); background-image: url('https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131__340.jpg');}
+
+            .swiper-slide:nth-child(6n) {
+              background-color: rgb(180, 10, 47); background-image: url('https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131__340.jpg' );}
+ 
+            .swiper-slide:nth-child(7n) {
+              background-color: rgb(35, 99, 19); background-image: url('https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131__340.jpg');}
+ 
+            .swiper-slide:nth-child(8n) {
+              background-color: rgb(0, 68, 255); background-image: url('https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131__340.jpg');}
+
+            .swiper-slide:nth-child(9n) {
+              background-color: rgb(218, 12, 218); background-image: url('https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131__340.jpg');}
+
+            .swiper-slide:nth-child(10n) {
+              background-color: rgb(54, 94, 77); background-image: url('https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131__340.jpg'); background-image: url('https://cdn.pixabay.com/photo/2014/04/02/10/15/ink-303244__340.png');}
+
+        </style>
+
+        <script>
+          var currentPosition = parseInt($("nav").css("top"));
+          $(window).scroll(function()
+          {       var position = $(window).scrollTop();
+          $("nav").stop().animate({"top":position+currentPosition+"px"},1000);
+         });
+
+
+          /*HTML :
+          출처: https://88240.tistory.com/171 [shaking blog:티스토리]*/
+        </script>
+    </head>
+
+    <body>
+
+        <nav id="L">
+            <ul>
+                <li><a href="#in"><button class="btn btn-2 btn-2c">INTRO</button></a></li>
+                <li><a href="#A"><button class="btn btn-2 btn-2c">LOG</button></a> </li>
+                <li><button class="btn btn-2 btn-2c">SISTEAM</button></li>
+                <li><a href="#D"><button class="btn btn-2 btn-2c">DIARY</button></a></li> 
+            </ul>
+        </nav>
+        
+
+       
+        <div class="본문">
+
+            <header> Dionaea muscipula</header>
+
+            <div class="black">.</div>
+
+            <div>
+              <br>
+              <br><img src="https://pbs.twimg.com/media/FVL_D-GUYAEUtsH?format=png&name=small" alt="" width="100%" height="350px">
+            </div>
+
+            <div >
+                <div id="in" ><p style="font-size: 18pt; text-align: center;"> 당신은 1년 전 실종된 우주비행사  '이든' 의 행적을 찾기 위해 <br> 머나먼 우주에 도달했습니다...</p><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                    '이든'은 우주 탐사를 위해 M-47 은하에 방문했고, 약 일주일 간 지구와 정상적인 통신을 이어가다 돌연 사라졌습니다. <br>
+                    당신의 목표는 그의 흔적을 찾고, 함께 지구로 생환하는 것입니다. <span>가능하다면요.</span><br>
+                    우리는 전과 같은 끔찍한 참사를 막기 위해 우주선에 자동 귀환 프로그램을 심어놓았습니다. <br>
+                    우주선은 지구 시간으로 31일 후 다시 출발합니다. 그 전까지 '이든'을 찾아야 합니다. <br>
+                    <br> 명심하세요. 우리는 텅 빈 우주선을 원하지 않습니다.
+                </div>
+
+                <br><br><br><br><hr id="A"><br>
+
+                <div >1. <br>
+                    우주선이 착륙했습니다. 외계 식물로 뒤덮인 미지의 행성을 탐사하며 '이든'에 대한 단서를 찾으세요. <br>
+                    그가 이 곳에서 어떤 일을 겪었는지 닥치는 대로 조사하세요. 아주 사소한 단서라도 좋습니다. <br> 행성의 생태계는 지금의 당신에게 중요하지 않습니다. 당신의 목표를 잊지 마세요.
+                </div>
+
+                <br><hr><br>
+
+                <div id="B">
+                    2. <br>
+                    우주에는 수많은 행성이 있고, 또한 수많은 생명이 있습니다. <br> 지구 밖의 모든 것을 우리의 상식으로 이해하려 들지 마세요. <br>
+                    '이든'의 기록에 따르면, 그들은 우리에게 적대적입니다.
+                    식물의 숨소리가 들린다면 즉시 장소를 피하세요.
+                </div>
+
+                <br><hr><br>
+
+                <div id="C">
+                  3. <br>
+                  당신에게 남은 시간을 확인하세요. 밤이 다가온다는 것은 곧 지구로 돌아갈 시간이 임박했다는 것을 의미합니다.
+              </div>
+
+
+                <br id="D"><br><br> <h1>.</h1> <br><br><br> <h1>.</h1> <br><br><br> <h1>.</h1> <br><br><br> <h1>.</h1>
+
+                <div >
+                    <div class="swiper mySwiper3">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                              <div class="andlog"> 2391 . 11. 13.
+                                  <br><br> 만약 내가 이 기록을 빠짐없이 썼다면, 오늘은 내가 탐사를 시작한 지 햇수로 4년이 되는 날이다. <br> 지구 바깥에서 날짜를 세는 게 <br> 무슨 의미가 있겠냐마는. <br>
+                                  축하의 의미로 작은 소원을 빌었다. <br> 이 넓은 우주에서 유랑하는 운석 하나 정도는 <br> 내 소원을 이뤄주지 않을까? <br><br> 통신 이상 없음. →
+                              </div> 
+                          </div>
+                          <div class="swiper-slide">
+                              <div class="andlog">
+                                  2391 . 11. 14. <br>
+                                  <br> 소원이 이루어졌다. 그러니까, 우주선이 <br> 어느 행성의 궤도에 걸렸다는 뜻이다. 맙소사. <br> 이제 이 지긋지긋한 우주선을 나갈 수 있다. <br> 손바닥만한 공간에 갇히다시피 산 지 얼마나 됐지? <br><br><br> 방금 세어보니 자그마치 1년 만이다. 
+                                  <br><br> 통신 이상 없음. <br>→
+                              </div>
+                          </div>
+                          <div class="swiper-slide"> 
+                              <div class="andlog">
+                                  2391 . 11. 15. <br>
+                                  <br> 약간의 우여곡절이 있었지만 착륙에 성공했다. <br> 지긋지긋한 우주선이라고 했던 게 불과 어제 일인데, 꼴에 4년을 함께했다고 그새 정이 들긴 했나보다. <br><br> 이번 탐사를 끝으로 귀환 요청을 할 것이다. <br> 다른 행성을 방문하는 건 이번이 마지막이다. <br> 이제 집에 가야지. 
+                                  <br><br> 통신 이상 없음.  <br>→
+                              </div>
+                          </div>
+                          <div class="swiper-slide"> 
+                              <div class="andlog">
+                                  2391 . 11. 16. <br>
+                                  <br> 약 하루 동안 탐사한 결과를 지구에 보냈다. <br> 아까 통신으로 대부분 전달했으나, 영 석연치 않은 점이 있어서 따로 기록을 남긴다.
+                                  <br><br> <span style="font-size: 14pt; font-weight: bold;"> 아까부터 귓가에 숨소리가 들려오는데, 역시 내가 미쳐가는 게 아닐까? </span>
+                                  <br><br> 통신 이상 -?ㅂ음. <br> →
+                              </div>
+                          </div>
+                          <div class="swiper-slide"> 
+                              <div class="andlog">
+                                  2391 . 11. 17. <br>
+                                  <br> 식물로 뒤덮인 행성. 쥐죽은 듯 고요한 식물들을 제외하면 별다른 생명체도 존재하지 않고, 대기 중에 유독물질이 섞여있는 것 이외에는 지구와 거의 흡사하다. 솔직히, 이 행성은 내가 봤던 어느 행성보다도 흥미롭다. 이 곳이라면 인간이 살 수 있지 않을까?
+                                  <br><br> <span style="font-size: 14pt; font-weight: bold;"> 숨소리가 또다시 들려온다. 이 곳에서 숨을 쉬는 동물이라곤 나 뿐이잖아. 대체 어떻게 된 일이야?</span>
+                                   <br><br> 통신 이상 없음. 시끄러워 <br> →
+                              </div>
+                          </div>
+                          <div class="swiper-slide"> 
+                              <div class="andlog" style="font-family: 'KCC-Kimhoon'; color: rgb(139, 0, 0); font-weight: bold;">
+                                  2391 . 11. 18. <br>
+                                  <br>   망할 행성 <br><br><br> 인간이 여기에서 살 수 있을지도 <br> 모ㄹㅡㄴ다고 했던 말은 추ㅣ소야 <br> →
+                              </div>
+                          </div>
+                          <div class="swiper-slide"> 
+                              <div class="andlog">
+                                  2391 . 11. 19. <br>
+                                  <br> 저것들, 아니 그들은 살아있다. 나는 여태껏 혼자가 아니었다. <span style="font-size: 14pt; font-weight: bold;">왜 몰랐지? 왜? 그들이 우리를 알아. 우리가 그 행성에서 했던 짓을 알고 있다고.</span><br> 그들에게 나는 이물질이나 다름없다. 먹히면 안 돼
+                                  <br><br> ※약 5분간 통신에 잎이 부스럭거리는 잡음 발생. <br> 제발. <br> →
+                              </div>
+                          </div>
+                          <div class="swiper-slide"> 
+                              <div class="andlog" style="font-family: 'KCC-Kimhoon'; color: rgb(139, 0, 0); font-weight: bold;">
+                                  2391 . 11. 20. <br><br> 이 행성에 발을 들여선 안 됐어. <br> →
+                              </div>
+                          </div>
+                          <div class="swiper-slide"> 
+                              <div class="andlog">
+                                  
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                     
+                      <!-- Swiper JS -->
+                      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                  
+                      <!-- Initialize Swiper -->
+                      <script>
+                       
+                        var swiper3 = new Swiper(".mySwiper3", {
+                          grabCursor: true,
+                          effect: "creative",
+                          creativeEffect: {
+                            prev: {
+                              shadow: true,
+                              translate: ["-20%", 0, -1],
+                            },
+                            next: {
+                              translate: ["100%", 0, 0],
+                            },
+                          },
+                        });
+                        
+                          
+                        
+                      </script>
+
+                </div>
+            </div>
+           
+
+        </div>
+
+        <footer> 프로젝트 : 여행 </footer>
+
+        
+    </body>
+</html>

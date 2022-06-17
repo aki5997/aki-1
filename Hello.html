@@ -1,0 +1,230 @@
+<html>
+    <head>
+
+        <title>he@/l?*lo#?</title>
+        <style>
+           
+
+         @font-face {
+          font-family: 'KCC-eunyoung';
+          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;}
+
+         @font-face {
+          font-family: 'DungGeunMo';
+          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;}
+
+         @font-face {
+          font-family: 'KCC-Kimhoon';
+          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-Kimhoon-Regular.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;}
+
+  
+
+         /*기본*/
+         .pull-left { float: left; }
+         .pull-right { float: right; }
+
+         span{font-size: 12pt; color: rgb(164, 0, 0);}
+         h1{text-align: center;}
+         a{text-decoration-line: none; text-decoration-color: red;;}
+
+
+         html{scroll-behavior: smooth;}
+
+
+         body{ background-color: black; color: white; float: left; position: relative;
+          line-height: 50px;} 
+
+          .본문{ float: left; position: relative; width: 60%; height: auto; margin: 100 10 10 150; font-family: 'DungGeunMo'; text-align: center; line-height: 1.5; transform: translateY(-50%); perspective: 400px; }
+
+          button{border: none; margin: 10 10 10 10; 
+                 position: relative; top: 400px; left: 100px;}
+
+          .내용{position: absolute; margin: 20 20 20 20; font-family: 'DungGeunMo'; color: white; font-size: 15pt;}
+
+          footer{clear: both; bottom: 0; margin: 10 10 10 10;
+                   text-align: right; font-family: 'DungGeunMo'; font-size: 10pt; color: rgb(174, 174, 174);}
+
+        </style>
+
+        <script type="text/javascript">
+          var text = $(".split");
+
+         var split = new SplitText(text);
+
+         function random(min, max){
+	      return (Math.random() * (max - min)) + min; }
+
+         $(split.chars).each(function(i){
+	     TweenMax.from($(this), 2.5, {
+		 opacity: 0,
+		 x: random(-500, 500),
+		 y: random(-500, 500),
+		 z: random(-500, 500),
+		 scale: .1,
+		 delay: i * .02,
+		 yoyo: true,
+		 repeat: -1,
+		 repeatDelay: 10
+	     });
+         }); 
+        </script>
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+        <script>
+            $(document).ready(function(){
+                    /*웹페이지 열었을 때*/
+                    $("#1").show();
+                    $("#2").hide();
+                    $("#3").hide();
+                    $("#4").hide();
+                    $("#5").hide();
+                    $("#6").hide();
+                    $("#7").hide();
+                    $("#8").hide();
+                    $("#dionaea").hide();
+         
+                    /*img1을 클릭했을 때 img2를 보여줌*/
+                    $("#1").click(function(){
+                        $("#1").hide();
+                        $("#2").show();
+                        $("#3").hide();
+                        $("#4").hide();
+                        $("#5").hide();
+                        $("#6").hide();
+                        $("#7").hide();
+                        $("#8").hide();
+                        $("#dionaea").show();
+                    });
+         
+                    /*img2를 클릭했을 때 img1을 보여줌*/
+                    $("#2").click(function(){
+                        $("#1").hide();
+                        $("#2").hide();
+                        $("#3").show();
+                        $("#4").hide();
+                        $("#5").hide();
+                        $("#6").hide();
+                        $("#7").hide();
+                        $("#8").hide();
+                        $("#dionaea").show();
+                    });
+
+                    /*img3를 클릭했을 때 img1을 보여줌*/
+                    $("#3").click(function(){
+                        $("#1").hide();
+                        $("#2").hide();
+                        $("#3").hide();
+                        $("#4").show();
+                        $("#5").hide();
+                        $("#6").hide();
+                        $("#7").hide();
+                        $("#8").hide();
+                        $("#dionaea").show();
+                    });
+
+                    /*img4를 클릭했을 때 img1을 보여줌*/
+                    $("#4").click(function(){
+                        $("#1").hide();
+                        $("#2").hide();
+                        $("#3").hide();
+                        $("#4").hide();
+                        $("#5").show();
+                        $("#6").hide();
+                        $("#7").hide();
+                        $("#8").hide();
+                        $("#dionaea").show();
+                    });
+
+                    /*img5를 클릭했을 때 img1을 보여줌*/
+                    $("#5").click(function(){
+                        $("#1").hide();
+                        $("#2").hide();
+                        $("#3").hide();
+                        $("#4").hide();
+                        $("#5").hide();
+                        $("#6").show();
+                        $("#7").hide();
+                        $("#8").hide();
+                        $("#dionaea").show();
+                    });
+
+                    /*img6를 클릭했을 때 img1을 보여줌*/
+                    $("#6").click(function(){
+                        $("#1").hide();
+                        $("#2").hide();
+                        $("#3").hide();
+                        $("#4").hide();
+                        $("#5").hide();
+                        $("#6").hide();
+                        $("#7").show();
+                        $("#8").hide();
+                        $("#dionaea").show();
+                    });
+
+                    /*img7를 클릭했을 때 img1을 보여줌*/
+                    $("#7").click(function(){
+                        $("#1").hide();
+                        $("#2").hide();
+                        $("#3").hide();
+                        $("#4").hide();
+                        $("#5").hide();
+                        $("#6").hide();
+                        $("#7").hide();
+                        $("#8").show();
+                        $("#dionaea").hide();
+                    });
+
+                    /*img8를 클릭했을 때 img1을 보여줌*/
+                    $("#8").click(function(){
+                        $("#1").hide();
+                        $("#2").hide();
+                        $("#3").hide();
+                        $("#4").hide();
+                        $("#5").hide();
+                        $("#6").hide();
+                        $("#7").hide();
+                        $("#8").hide();
+                        $("#dionaea").hide();
+                    });
+                });
+        </script>
+
+    </head>
+
+
+    <body>
+
+        <div class="본문">
+
+            <div class="내용" id="dionaea" style="left: 100;"> <img src="https://pbs.twimg.com/media/FVdHPHPaQAEFcot?format=png&name=small" alt="" width="800px"></div>
+
+            
+
+            <button type="button">
+                <div class="내용" id="1"> ▼ ...</div>
+                <div class="내용" id="2"> ▼ ......</div>
+                <div class="내용" id="3"> ▼ .........</div>
+                <div class="내용" id="4"> ▼ 이든?</div>
+                <div class="내용" id="5"> ▼ ......오, 이런. 제정신이 아니군. 이 곳에 너무 오래 있었어.</div>
+                <div class="내용" id="6"> ▼ 헛것을 보고 있잖아.</div>
+                <div class="내용" id="7"> ▼ 어서, 이럴 시간 없어.</div>
+                <div class="내용" id="8"> <a href="개인과제_메인.html" style="color: red;"> ▼ 돌아가야 해. </a></div>
+                <img src="https://pbs.twimg.com/media/FVc6KOzaIAAHw_p?format=png&name=medium" alt="" width="800px">
+             </button>
+
+             
+        </div>
+
+        
+        
+    </body>
+
+</html>
